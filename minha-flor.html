@@ -511,14 +511,14 @@
     <div class="chapter-content fade-in">
       <span class="chapter-tag">Niterói · O primeiro encontro</span>
       <h2 class="chapter-heading">
-        Ela veio até mim<br>
-        pelas <em>águas da Baía</em>
+        Eu vim da Bahia<br>
+        e te encontrei nas <em>barcas</em>
       </h2>
       <p class="chapter-body">
-        As barcas de Niterói já viram muita coisa — gente indo e vindo,
-        despedidas, chegadas, o barulho da água e do vento.<br><br>
-        Mas nenhuma chegada foi igual à sua.<br>
-        Você atravessou a baía <strong>e o mundo fez sentido de repente.</strong>
+        Salvador ficou pra trás. A baía, o cais, o barulho da água —
+        tudo isso era só cenário.<br><br>
+        O que importava era você ali, me esperando em Niterói.
+        Eu atravessei o país <strong>e o mundo fez sentido de repente.</strong>
       </p>
     </div>
   </div>
@@ -558,9 +558,9 @@
       <p class="timeline-detail">A internet era menor, o mundo era maior, e mesmo assim foi você que apareceu.</p>
     </div>
     <div class="timeline-item">
-      <p class="timeline-year">Niterói — As Barcas</p>
+      <p class="timeline-year">Salvador → Niterói — As Barcas</p>
       <p class="timeline-event">O primeiro encontro</p>
-      <p class="timeline-detail">Você veio até aqui. Isso já dizia tudo.</p>
+      <p class="timeline-detail">Eu vim de Salvador até Niterói. Isso já dizia tudo.</p>
     </div>
     <div class="timeline-item">
       <p class="timeline-year">A Esquina</p>
@@ -579,6 +579,82 @@
     </div>
   </div>
 </section>
+
+<div class="divider"></div>
+
+<!-- FRASES DO LIVRO -->
+<section class="book-section">
+  <p class="book-intro fade-in">palavras que já escrevi pra você,<br><em>e que ainda são verdade</em></p>
+  <div class="book-phrases">
+    <div class="book-phrase fade-in">As vezes tocar o céu nem sempre é ir até ele, na verdade você é meu céu.</div>
+    <div class="book-phrase fade-in">Se eu não tivesse te achado por acaso, eu continuaria vivendo uma vida sem graça e sozinho. Você veio para mim como um sopro de vida, e agora se tornou a minha vida.</div>
+    <div class="book-phrase fade-in">Você fez florescer dentro de mim o amor que um dia eu tive medo de sentir.</div>
+    <div class="book-phrase fade-in">Eu vivo dizendo que deixei tudo para trás por sua causa, mas na verdade, foi você quem me deu tudo e se tornou meu tudo.</div>
+    <div class="book-phrase fade-in">Mesmo meu coração machucado, ele ainda bate por você.</div>
+    <div class="book-phrase fade-in">Me tornei mais seu do que meu, e se isso for um erro me desculpa — não consigo mais me devolver.</div>
+    <div class="book-phrase fade-in">Às vezes acordo e penso que não vou conseguir levantar da cama. Daí olho para você, e vejo de onde vem minha força para continuar levantando todo dia.</div>
+    <div class="book-phrase fade-in">Em dias que nada faz sentido, basta apenas olhar em sua direção e encontrarei a definição de viver.</div>
+    <div class="book-phrase fade-in">E se essa for a única oportunidade para viver, que seja apenas com você. Você é meu tempo, e quero ficar com você até o tempo acabar.</div>
+    <div class="book-phrase fade-in">Eu quis você no momento em que te conheci — não porque eu estava sozinho, mas porque minha alma se sentia bem com a sua.</div>
+    <div class="book-phrase fade-in">Quando você me deu a mão e me tirou da escuridão, você não só me deu luz — você me tornou a luz.</div>
+    <div class="book-phrase fade-in">Vou te cuidar, te regar, te amar, até você não lembrar de dor alguma.</div>
+    <div class="book-phrase fade-in">Não aguento estar em um estado na matéria ou no cosmos que não exista você.</div>
+    <div class="book-phrase fade-in">Eu espero que nossa história se repita por todo o cosmo, e por todos os universos. Espero que o meu eu de outro universo te encontre e te ame como eu desse universo ama você.</div>
+    <div class="book-phrase fade-in">Independente de qual for a minha escolha, você está em todas elas.</div>
+    <div class="book-phrase fade-in">Ainda assim, estou perdidamente apaixonado por você.</div>
+  </div>
+</section>
+
+<style>
+  .book-section {
+    padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 6vw, 4rem);
+    max-width: 620px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .book-intro {
+    font-family: 'IM Fell English', serif;
+    font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+    color: var(--muted);
+    font-style: italic;
+    margin-bottom: 3.5rem;
+    line-height: 1.7;
+  }
+
+  .book-intro em {
+    color: var(--rose);
+    font-style: normal;
+  }
+
+  .book-phrases {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .book-phrase {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    font-style: italic;
+    color: var(--cream);
+    line-height: 1.7;
+    padding: clamp(2rem, 6vw, 3.5rem) 0;
+    border-bottom: 1px solid #2e1f3e55;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+  }
+
+  .book-phrase:last-child {
+    border-bottom: none;
+  }
+
+  .book-phrase.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
 
 <div class="divider"></div>
 
@@ -622,9 +698,9 @@
 
   // TYPEWRITER
   const lines = [
-    "ela apareceu no tumblr uma tarde qualquer",
-    "e de repente o mundo ficou menor",
-    "e melhor.",
+    "eu morava em salvador",
+    "ela estava em niterói",
+    "e o tumblr fez o mundo ficar pequeno.",
     "",
     "quase 11 anos depois",
     "ainda é a mesma sensação.",
