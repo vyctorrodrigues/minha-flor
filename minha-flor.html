@@ -583,34 +583,46 @@
 <div class="divider"></div>
 
 <!-- FRASES DO LIVRO -->
-<section class="book-section">
-  <p class="book-intro fade-in">palavras que já escrevi pra você,<br><em>e que ainda são verdade</em></p>
-  <div class="book-phrases">
-    <div class="book-phrase fade-in">As vezes tocar o céu nem sempre é ir até ele, na verdade você é meu céu.</div>
-    <div class="book-phrase fade-in">Se eu não tivesse te achado por acaso, eu continuaria vivendo uma vida sem graça e sozinho. Você veio para mim como um sopro de vida, e agora se tornou a minha vida.</div>
-    <div class="book-phrase fade-in">Você fez florescer dentro de mim o amor que um dia eu tive medo de sentir.</div>
-    <div class="book-phrase fade-in">Eu vivo dizendo que deixei tudo para trás por sua causa, mas na verdade, foi você quem me deu tudo e se tornou meu tudo.</div>
-    <div class="book-phrase fade-in">Mesmo meu coração machucado, ele ainda bate por você.</div>
-    <div class="book-phrase fade-in">Me tornei mais seu do que meu, e se isso for um erro me desculpa — não consigo mais me devolver.</div>
-    <div class="book-phrase fade-in">Às vezes acordo e penso que não vou conseguir levantar da cama. Daí olho para você, e vejo de onde vem minha força para continuar levantando todo dia.</div>
-    <div class="book-phrase fade-in">Em dias que nada faz sentido, basta apenas olhar em sua direção e encontrarei a definição de viver.</div>
-    <div class="book-phrase fade-in">E se essa for a única oportunidade para viver, que seja apenas com você. Você é meu tempo, e quero ficar com você até o tempo acabar.</div>
-    <div class="book-phrase fade-in">Eu quis você no momento em que te conheci — não porque eu estava sozinho, mas porque minha alma se sentia bem com a sua.</div>
-    <div class="book-phrase fade-in">Quando você me deu a mão e me tirou da escuridão, você não só me deu luz — você me tornou a luz.</div>
-    <div class="book-phrase fade-in">Vou te cuidar, te regar, te amar, até você não lembrar de dor alguma.</div>
-    <div class="book-phrase fade-in">Não aguento estar em um estado na matéria ou no cosmos que não exista você.</div>
-    <div class="book-phrase fade-in">Eu espero que nossa história se repita por todo o cosmo, e por todos os universos. Espero que o meu eu de outro universo te encontre e te ame como eu desse universo ama você.</div>
-    <div class="book-phrase fade-in">Independente de qual for a minha escolha, você está em todas elas.</div>
-    <div class="book-phrase fade-in">Ainda assim, estou perdidamente apaixonado por você.</div>
+<section class="book-section fade-in">
+  <p class="book-intro">palavras que já escrevi pra você,<br><em>e que ainda são verdade</em></p>
+
+  <div class="carousel-wrapper">
+    <div class="carousel-track" id="carouselTrack">
+      <div class="book-phrase">As vezes tocar o céu nem sempre é ir até ele, na verdade você é meu céu.</div>
+      <div class="book-phrase">Se eu não tivesse te achado por acaso, eu continuaria vivendo uma vida sem graça e sozinho. Você veio para mim como um sopro de vida, e agora se tornou a minha vida.</div>
+      <div class="book-phrase">Você fez florescer dentro de mim o amor que um dia eu tive medo de sentir.</div>
+      <div class="book-phrase">Eu vivo dizendo que deixei tudo para trás por sua causa, mas na verdade, foi você quem me deu tudo e se tornou meu tudo.</div>
+      <div class="book-phrase">Mesmo meu coração machucado, ele ainda bate por você.</div>
+      <div class="book-phrase">Me tornei mais seu do que meu, e se isso for um erro me desculpa — não consigo mais me devolver.</div>
+      <div class="book-phrase">Às vezes acordo e penso que não vou conseguir levantar da cama. Daí olho para você, e vejo de onde vem minha força para continuar levantando todo dia.</div>
+      <div class="book-phrase">Em dias que nada faz sentido, basta apenas olhar em sua direção e encontrarei a definição de viver.</div>
+      <div class="book-phrase">E se essa for a única oportunidade para viver, que seja apenas com você. Você é meu tempo, e quero ficar com você até o tempo acabar.</div>
+      <div class="book-phrase">Eu quis você no momento em que te conheci — não porque eu estava sozinho, mas porque minha alma se sentia bem com a sua.</div>
+      <div class="book-phrase">Quando você me deu a mão e me tirou da escuridão, você não só me deu luz — você me tornou a luz.</div>
+      <div class="book-phrase">Vou te cuidar, te regar, te amar, até você não lembrar de dor alguma.</div>
+      <div class="book-phrase">Não aguento estar em um estado na matéria ou no cosmos que não exista você.</div>
+      <div class="book-phrase">Eu espero que nossa história se repita por todo o cosmo, e por todos os universos. Espero que o meu eu de outro universo te encontre e te ame como eu desse universo ama você.</div>
+      <div class="book-phrase">Independente de qual for a minha escolha, você está em todas elas.</div>
+      <div class="book-phrase">Ainda assim, estou perdidamente apaixonado por você.</div>
+    </div>
+  </div>
+
+  <!-- dots -->
+  <div class="carousel-dots" id="carouselDots"></div>
+
+  <!-- arrows -->
+  <div class="carousel-arrows">
+    <button class="carr-btn" id="btnPrev" aria-label="anterior">&#8592;</button>
+    <span class="carr-counter" id="carrCounter">1 / 16</span>
+    <button class="carr-btn" id="btnNext" aria-label="próximo">&#8594;</button>
   </div>
 </section>
 
 <style>
   .book-section {
-    padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 6vw, 4rem);
-    max-width: 620px;
-    margin: 0 auto;
+    padding: clamp(4rem, 10vw, 8rem) 0;
     text-align: center;
+    overflow: hidden;
   }
 
   .book-intro {
@@ -618,8 +630,9 @@
     font-size: clamp(0.9rem, 2.5vw, 1.05rem);
     color: var(--muted);
     font-style: italic;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2.5rem;
     line-height: 1.7;
+    padding: 0 1.5rem;
   }
 
   .book-intro em {
@@ -627,34 +640,125 @@
     font-style: normal;
   }
 
-  .book-phrases {
+  .carousel-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .carousel-track {
     display: flex;
-    flex-direction: column;
-    gap: 0;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
   }
 
   .book-phrase {
+    min-width: 100%;
+    padding: clamp(2rem, 6vw, 3rem) clamp(2rem, 8vw, 5rem);
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    font-size: clamp(1.1rem, 3.5vw, 1.5rem);
     font-style: italic;
     color: var(--cream);
-    line-height: 1.7;
-    padding: clamp(2rem, 6vw, 3.5rem) 0;
-    border-bottom: 1px solid #2e1f3e55;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.9s ease, transform 0.9s ease;
+    line-height: 1.8;
+    box-sizing: border-box;
   }
 
-  .book-phrase:last-child {
-    border-bottom: none;
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    padding: 0 1rem;
   }
 
-  .book-phrase.visible {
-    opacity: 1;
-    transform: translateY(0);
+  .carr-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--plum);
+    transition: background 0.3s, transform 0.3s;
+    cursor: pointer;
+    border: none;
+    padding: 0;
+  }
+
+  .carr-dot.active {
+    background: var(--rose);
+    transform: scale(1.4);
+  }
+
+  .carousel-arrows {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .carr-btn {
+    background: none;
+    border: 1px solid var(--plum);
+    color: var(--rose);
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: border-color 0.3s, background 0.3s;
+    display: flex; align-items: center; justify-content: center;
+  }
+
+  .carr-btn:hover {
+    background: var(--plum);
+    border-color: var(--rose);
+  }
+
+  .carr-counter {
+    font-size: 0.75rem;
+    color: var(--muted);
+    font-style: italic;
+    min-width: 3.5rem;
   }
 </style>
+
+<script>
+  (function() {
+    const track = document.getElementById('carouselTrack');
+    const dotsContainer = document.getElementById('carouselDots');
+    const counter = document.getElementById('carrCounter');
+    const phrases = track.querySelectorAll('.book-phrase');
+    const total = phrases.length;
+    let current = 0;
+
+    // build dots
+    phrases.forEach((_, i) => {
+      const d = document.createElement('button');
+      d.className = 'carr-dot' + (i === 0 ? ' active' : '');
+      d.setAttribute('aria-label', 'frase ' + (i+1));
+      d.addEventListener('click', () => goTo(i));
+      dotsContainer.appendChild(d);
+    });
+
+    function goTo(idx) {
+      current = (idx + total) % total;
+      track.style.transform = `translateX(-${current * 100}%)`;
+      dotsContainer.querySelectorAll('.carr-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+      });
+      counter.textContent = `${current + 1} / ${total}`;
+    }
+
+    document.getElementById('btnPrev').addEventListener('click', () => goTo(current - 1));
+    document.getElementById('btnNext').addEventListener('click', () => goTo(current + 1));
+
+    // swipe support
+    let startX = 0;
+    track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', e => {
+      const diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+    });
+  })();
+</script>
 
 <div class="divider"></div>
 
